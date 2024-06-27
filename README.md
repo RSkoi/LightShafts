@@ -1,6 +1,6 @@
 # LightShafts
 
-Volumetric Light Shafts for the KK/KKS studio, lazy port of [Light Shafts](https://github.com/robcupisz/LightShafts). Requires [Component Util](https://github.com/RSkoi/ComponentUtil).
+Volumetric Light Shafts for the KK/KKS studio, lazy port of [Light Shafts](https://github.com/robcupisz/LightShafts). Requires [Component Util](https://github.com/RSkoi/ComponentUtil). Light Shafts do not react to Vanilla+ shaders, see **Known Quirks & Issues** below.
 
 Light Shafts are computationally expensive. Try to keep resolutions and sample counts to a minimum.
 
