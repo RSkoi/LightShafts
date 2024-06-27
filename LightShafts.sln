@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LightShafts.Shared", "LightShafts.Shared\LightShafts.Shared.shproj", "{D17B37FF-6184-42CF-9DC4-E299294F8771}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightShafts.KKS", "LightShafts.KKS\LightShafts.KKS.csproj", "{DD34370A-6854-49A2-9FC7-D5B6DB3BF356}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightShafts.KK", "LightShafts.KK\LightShafts.KK.csproj", "{32CAB7BC-7D19-4EE7-BD15-DE67FCA07F7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD34370A-6854-49A2-9FC7-D5B6DB3BF356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD34370A-6854-49A2-9FC7-D5B6DB3BF356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD34370A-6854-49A2-9FC7-D5B6DB3BF356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD34370A-6854-49A2-9FC7-D5B6DB3BF356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32CAB7BC-7D19-4EE7-BD15-DE67FCA07F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CAB7BC-7D19-4EE7-BD15-DE67FCA07F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CAB7BC-7D19-4EE7-BD15-DE67FCA07F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CAB7BC-7D19-4EE7-BD15-DE67FCA07F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {734E74D6-3397-4665-AC1A-A31E57931277}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LightShafts.Shared\LightShafts.Shared.projitems*{32cab7bc-7d19-4ee7-bd15-de67fca07f7e}*SharedItemsImports = 5
+		LightShafts.Shared\LightShafts.Shared.projitems*{d17b37ff-6184-42cf-9dc4-e299294f8771}*SharedItemsImports = 13
+		LightShafts.Shared\LightShafts.Shared.projitems*{dd34370a-6854-49a2-9fc7-d5b6db3bf356}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

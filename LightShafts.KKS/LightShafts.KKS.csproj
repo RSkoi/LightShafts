@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <AssemblyName>LightShafts.KKS</AssemblyName>
+    <Description>Port of LightShafts by robcupisz for KKS studio.</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RepositoryUrl></RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);KKS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);KKS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" />
+    <PackageReference Include="IllusionLibs.KoikatsuSunshine.Assembly-CSharp" Version="2021.9.17" />
+    <PackageReference Include="IllusionLibs.KoikatsuSunshine.Assembly-CSharp-firstpass" Version="2021.9.17" />
+    <PackageReference Include="IllusionLibs.KoikatsuSunshine.UnityEngine.CoreModule" Version="2019.4.9" />
+    <PackageReference Include="UnityEngine.Modules" Version="2019.4.9" IncludeAssets="compile" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <EmbeddedResource Include="..\LightShafts.Shared\Resources\lightshafts.unity3d">
+          <CustomToolNamespace></CustomToolNamespace>
+      </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="..\LightShafts.Shared\LightShafts.Shared.projitems" Label="Shared" />
+</Project>
