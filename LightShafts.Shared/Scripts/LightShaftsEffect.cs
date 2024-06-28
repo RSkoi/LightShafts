@@ -207,7 +207,9 @@ namespace LightShaftsPlugin
         public void OnRenderObject()
         {
             m_CurrentCamera = Camera.current;
-            if (m_Light == null || !m_MinRequirements || !CheckCamera() || !IsVisible())
+            if (m_Light == null || !m_Light.enabled
+                || !m_MinRequirements
+                || !CheckCamera() || !IsVisible())
                 return;
 
             // Prepare

@@ -15,5 +15,4 @@ Note that releases include zipmod with Unity's built-in Standard shaders which e
 
 ## Known Quirks & Issues
 
-- If you add the effect to a `GameObject` without a `Light`, the effect will auto-add one for you, but ComponentUtil will not keep track of it across scene save / load.
 - Not all shaders are supported, meaning not all objects will be picked up by the Light Shafts. Generally, Light Shafts will only react to Standard-adjacent shaders, such as Unity's built-in Standard or IBL_shader. You can sometimes hack your way around this limitation by duplicating a material, setting the shader to Standard and 'hiding' it behind the original material.
