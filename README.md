@@ -4,8 +4,6 @@ Volumetric Light Shafts for the KK/KKS studio, lazy port of [Light Shafts](https
 
 Light Shafts are computationally expensive. Try to keep resolutions and sample counts to a minimum.
 
-Note that releases include zipmod with Unity's built-in Standard shaders which exposes them to [Material Editor](https://github.com/IllusionMods/KK_Plugins?tab=readme-ov-file#materialeditor).
-
 ## How-To-Use
 
 0. Add a `Directional` or `Spot` light to the studio workspace.
