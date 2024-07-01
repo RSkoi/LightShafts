@@ -27,7 +27,7 @@ namespace LightShaftsPlugin
         {
             if (m_ShadowmapMode == LightShaftsShadowmapMode.Static && !m_ShadowmapDirty)
                 return;
-
+            
             InitShadowmap();
 
             if (m_ShadowmapCamera == null)
@@ -173,6 +173,9 @@ namespace LightShaftsPlugin
 
         void Raymarch(int width, int height, Vector4 lightPos)
         {
+            if (m_Shadowmap == null)
+                return;
+
             SetFrustumRays(m_RaymarchMaterial);
 
             int shadowmapWidth = m_Shadowmap.width;

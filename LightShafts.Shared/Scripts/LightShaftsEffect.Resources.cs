@@ -11,7 +11,17 @@ namespace LightShaftsPlugin
         LightShaftsShadowmapMode m_ShadowmapModeOld = LightShaftsShadowmapMode.Dynamic;
         public Camera[] m_Cameras;
         public Camera m_CurrentCamera;
-        bool m_ShadowmapDirty = true;
+        private bool m_ForceShadowmapDirty = false;
+        public bool ForceShadowmapDirty
+        {
+            get { return m_ForceShadowmapDirty; }
+            set
+            {
+                m_ShadowmapDirty = value;
+                m_ForceShadowmapDirty = value;
+            }
+        }
+        public bool m_ShadowmapDirty = true;
         public Vector3 m_Size = new(10, 10, 20);
         public float m_SpotNear = 0.1f;
         public float m_SpotFar = 1.0f;

@@ -142,11 +142,6 @@ namespace LightShaftsPlugin
             Shader.DisableKeyword(firstOn ? secondKeyword : firstKeyword);
         }
 
-        public void SetShadowmapDirty()
-        {
-            m_ShadowmapDirty = true;
-        }
-
         void GetFrustumRays(out Matrix4x4 frustumRays, out Vector3 cameraPosLocal)
         {
             float far = m_CurrentCamera.farClipPlane;
