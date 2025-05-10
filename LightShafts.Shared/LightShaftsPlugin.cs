@@ -11,7 +11,7 @@ namespace LightShaftsPlugin
     {
         internal const string PLUGIN_GUID = "RSkoi.robcupisz.LightShafts";
         internal const string PLUGIN_NAME = "LightShafts";
-        internal const string PLUGIN_VERSION = "1.0.2";
+        internal const string PLUGIN_VERSION = "1.0.3";
 
         internal static LightShaftsPlugin _instance;
         internal static ManualLogSource _logger;
