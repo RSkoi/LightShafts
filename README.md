@@ -1,6 +1,6 @@
 # LightShafts
 
-Volumetric Light Shafts for the KK/KKS studio, lazy port of [Light Shafts](https://github.com/robcupisz/LightShafts). Requires [Component Util](https://github.com/RSkoi/ComponentUtil). Light Shafts do not react to Vanilla+ shaders, see **Known Quirks & Issues** below.
+Volumetric Light Shafts for the KK/KKS studio, lazy port of [Light Shafts](https://github.com/robcupisz/LightShafts). Requires [Component Util](https://github.com/RSkoi/ComponentUtil).
 
 Light Shafts are computationally expensive. Try to keep resolutions and sample counts to a minimum.
 
@@ -13,5 +13,5 @@ Light Shafts are computationally expensive. Try to keep resolutions and sample c
 
 ## Known Quirks & Issues
 
-- LightShafts support different 'depth' modes. `DepthType` (Property) effectively determines which shaders will 'cast' volumetric shadows. Default behaviour is `Opaque` (e.g. Unity Standard, IBL_shader). `TransparentCutout` will pick up Vanilla+ shaders and other masked transparency shaders. `Transparent` is for most semitransparent shaders.
+- Light Shafts support different 'depth' modes. `DepthType` (Property) effectively determines which shaders will 'cast' volumetric shadows. Default behaviour is `Opaque` (e.g. Unity Standard, IBL_shader). `TransparentCutout` will pick up Vanilla+ shaders and other masked transparency shaders. `Transparent` is for most semitransparent shaders.
 - Light Shafts (their shadow map to be exact) can be made static by setting `m_ShadowmapMode` (Field) to `Static` and toggling `ForceShadowmapDirty` (Property) to true / checked.  This is helpful for when Light Shafts conflict with scripted items, such as mirror surfaces. Notice that recalculation of Light Shafts is only triggered when `ForceShadowmapDirty` is set to true.
