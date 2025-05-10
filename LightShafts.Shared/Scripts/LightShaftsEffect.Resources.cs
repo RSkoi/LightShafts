@@ -35,6 +35,9 @@ namespace LightShaftsPlugin
         public int m_ShadowmapRes = 1024;
         Camera m_ShadowmapCamera;
         RenderTexture m_Shadowmap;
+        public DepthShaderType DepthType = DepthShaderType.Opaque;
+        public Shader m_DepthShaderTransparentCutout = LightShaftsPlugin._DepthTransparentCutout;
+        public Shader m_DepthShaderTransparent = LightShaftsPlugin._DepthTransparent;
         public Shader m_DepthShader = LightShaftsPlugin._Depth;
         RenderTexture m_ColorFilter;
         public Shader m_ColorFilterShader = LightShaftsPlugin._ColorFilter;
@@ -323,6 +326,24 @@ namespace LightShaftsPlugin
             RenderTexture.ReleaseTemporary(m_InterpolationEpi);
             RenderTexture.ReleaseTemporary(m_RaymarchedLightEpi);
             RenderTexture.ReleaseTemporary(m_InterpolateAlongRaysEpi);
+        }
+
+       public enum DepthShaderType
+        {
+            Opaque,
+            Transparent,
+            TransparentCutout
+        }
+
+        Shader GetDepthShader(DepthShaderType type)
+        {
+            return type switch
+            {
+                DepthShaderType.Transparent => m_DepthShaderTransparent,
+                DepthShaderType.TransparentCutout => m_DepthShaderTransparentCutout,
+                DepthShaderType.Opaque => m_DepthShader,
+                _ => m_DepthShader,
+            };
         }
     }
 }

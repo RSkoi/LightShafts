@@ -20,6 +20,8 @@ namespace LightShaftsPlugin
         private static Material _matColorFilter;
         private static Material _matCoord;
         private static Material _matDepth;
+        private static Material _matDepthTransparent;
+        private static Material _matDepthTransparentCutout;
         private static Material _matDepthBreaks;
         private static Material _matFinalInterpolation;
         private static Material _matInterpolateAlongRays;
@@ -31,6 +33,8 @@ namespace LightShaftsPlugin
         internal static Shader _ColorFilter;
         internal static Shader _Coord;
         internal static Shader _Depth;
+        internal static Shader _DepthTransparent;
+        internal static Shader _DepthTransparentCutout;
         internal static Shader _DepthBreaks;
         internal static Shader _FinalInterpolation;
         internal static Shader _InterpolateAlongRays;
@@ -61,6 +65,8 @@ namespace LightShaftsPlugin
             _matColorFilter             = ab.LoadAsset<Material>("ls_ColorFilter");
             _matCoord                   = ab.LoadAsset<Material>("ls_Coord");
             _matDepth                   = ab.LoadAsset<Material>("ls_Depth");
+            _matDepthTransparent        = ab.LoadAsset<Material>("ls_DepthTransparent");
+            _matDepthTransparentCutout  = ab.LoadAsset<Material>("ls_DepthTransparentCutout");
             _matDepthBreaks             = ab.LoadAsset<Material>("ls_DepthBreaks");
             _matFinalInterpolation      = ab.LoadAsset<Material>("ls_FinalInterpolation");
             _matInterpolateAlongRays    = ab.LoadAsset<Material>("ls_InterpolateAlongRays");
@@ -75,6 +81,8 @@ namespace LightShaftsPlugin
             _ColorFilter            = _matColorFilter.shader;
             _Coord                  = _matCoord.shader;
             _Depth                  = _matDepth.shader;
+            _DepthTransparent       = _matDepthTransparent.shader;
+            _DepthTransparentCutout = _matDepthTransparentCutout.shader;
             _DepthBreaks            = _matDepthBreaks.shader;
             _FinalInterpolation     = _matFinalInterpolation.shader;
             _InterpolateAlongRays   = _matInterpolateAlongRays.shader;

@@ -64,7 +64,7 @@ namespace LightShaftsPlugin
             m_ShadowmapCamera.cullingMask = m_CullingMask;
             m_ShadowmapCamera.backgroundColor = Color.white;
 
-            m_ShadowmapCamera.RenderWithShader(m_DepthShader, "RenderType");
+            m_ShadowmapCamera.RenderWithShader(GetDepthShader(DepthType), "RenderType");
 
             if (m_Colored)
             {
