@@ -11,7 +11,7 @@ namespace LightShaftsPlugin
     {
         internal const string PLUGIN_GUID = "RSkoi.robcupisz.LightShafts";
         internal const string PLUGIN_NAME = "LightShafts";
-        internal const string PLUGIN_VERSION = "1.0.3";
+        internal const string PLUGIN_VERSION = "1.0.4";
 
         internal static LightShaftsPlugin _instance;
         internal static ManualLogSource _logger;
@@ -22,6 +22,7 @@ namespace LightShaftsPlugin
         private static Material _matDepth;
         private static Material _matDepthTransparent;
         private static Material _matDepthTransparentCutout;
+        private static Material _matDepthAll;
         private static Material _matDepthBreaks;
         private static Material _matFinalInterpolation;
         private static Material _matInterpolateAlongRays;
@@ -35,6 +36,7 @@ namespace LightShaftsPlugin
         internal static Shader _Depth;
         internal static Shader _DepthTransparent;
         internal static Shader _DepthTransparentCutout;
+        internal static Shader _DepthAll;
         internal static Shader _DepthBreaks;
         internal static Shader _FinalInterpolation;
         internal static Shader _InterpolateAlongRays;
@@ -67,6 +69,7 @@ namespace LightShaftsPlugin
             _matDepth                   = ab.LoadAsset<Material>("ls_Depth");
             _matDepthTransparent        = ab.LoadAsset<Material>("ls_DepthTransparent");
             _matDepthTransparentCutout  = ab.LoadAsset<Material>("ls_DepthTransparentCutout");
+            _matDepthAll                = ab.LoadAsset<Material>("ls_DepthAll");
             _matDepthBreaks             = ab.LoadAsset<Material>("ls_DepthBreaks");
             _matFinalInterpolation      = ab.LoadAsset<Material>("ls_FinalInterpolation");
             _matInterpolateAlongRays    = ab.LoadAsset<Material>("ls_InterpolateAlongRays");
@@ -83,6 +86,7 @@ namespace LightShaftsPlugin
             _Depth                  = _matDepth.shader;
             _DepthTransparent       = _matDepthTransparent.shader;
             _DepthTransparentCutout = _matDepthTransparentCutout.shader;
+            _DepthAll               = _matDepthAll.shader;
             _DepthBreaks            = _matDepthBreaks.shader;
             _FinalInterpolation     = _matFinalInterpolation.shader;
             _InterpolateAlongRays   = _matInterpolateAlongRays.shader;
